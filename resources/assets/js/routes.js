@@ -6,7 +6,14 @@ let routes = [
     {
 
        path:'/',
-       component: require('./views/Home'),
+       component: require('./views/layout/body/Home'),
+
+    },
+
+    {
+
+        path:'/problema',
+        component: require('./views/layout/body/Problema'),
 
     }
 
@@ -15,6 +22,8 @@ let routes = [
 
 export default new VueRouter({
 
-    routes
+    routes,
+
+    linkActiveClass: 'is-active',
 
 });
