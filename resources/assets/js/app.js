@@ -1,3 +1,5 @@
+import User from "./Model/User";
+
 require('./vendor');
 
 import Vue from 'vue';
@@ -11,13 +13,15 @@ window.Vue = Vue;
 Vue.use(VueRouter);
 
 require('./views/layouts');
+require('./vue/bootstrap');
+require('./Model/bootstrap');
 
 /*
 require('./views/layout');
 require('./filters/bootstrap');
 require('./directives/bootstrap');
 require('./components/bootstrap');
-require('./vue/bootstrap');
+
 */
 
 window.EventBus = window.Bus = new Vue();
@@ -31,6 +35,7 @@ window.App = new Vue({
         return {
 
             user: false,
+            userModel: new User('Rodrigo', 'rodrigo@cursino.com')
 
         }
     },
