@@ -15,13 +15,12 @@ Vue.use(VueRouter);
 require('./views/layouts');
 require('./vue/bootstrap');
 require('./Model/bootstrap');
+require('./views/components/bootstrap');
 
 /*
 require('./views/layout');
 require('./filters/bootstrap');
 require('./directives/bootstrap');
-require('./components/bootstrap');
-
 */
 
 window.EventBus = window.Bus = new Vue();

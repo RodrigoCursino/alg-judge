@@ -1,7 +1,7 @@
 <template>
 
     <div class="field">
-        <label class="label">Label</label>
+        <label class="label">{{label}}</label>
         <div class="control">
            <slot></slot>
         </div>
@@ -31,6 +31,14 @@
                 required: true,
             },
         },
+
+        computed: {
+            label(){
+
+                return this.field.toUpperCase();
+            }
+
+        }
     }
 
 </script>
