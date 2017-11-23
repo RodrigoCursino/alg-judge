@@ -13,7 +13,15 @@ let routes = [
     {
 
         path:'/problema',
-        component: require('./views/layout/body/Problema'),
+        component: require('./views/layout/body/professor/problema/Problema'),
+
+    },
+
+
+    {
+
+        path:'/alunos',
+        component: require('./views/layout/body/professor/alunos/Alunos'),
 
     }
 

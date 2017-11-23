@@ -1,7 +1,7 @@
 <template>
     <div>
         <form>
-            <input type="hidden" :value="abc.id"/>
+            <input type="hidden" :value="formRequest.id"/>
             <slot></slot>
             <hr>
             <a @click="submit" class="button is-primary">Salvar</a>
@@ -15,25 +15,39 @@
 </style>
 
 <script>
+
+    import Problema from '../../../../Model/Problema'
+
     export default {
+
 
         props: {
 
-            abc:{
+            formRequest: {
                 type: Object,
                 required: true,
             },
 
         },
 
-        methods:{
+        methods: {
 
             submit() {
-                if(this.abc.id) {
-                    this.abc.updateForm();
+                if (this.formRequest.id) {
+                    this.formRequest.updateForm();
                 } else {
-                    debugger;
-                    this.abc.submitForm();
+                    const data = {
+                        id: null,
+                        titulo: 'teste',
+                        descricao: 'teste',
+                        delete: 'teste',
+                        descricaoEntrada: 'teste',
+                        descricaoSaida: 'teste',
+                    };
+
+                    axios.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(response => {
+                        console.log('saved', response);
+                    });
                 }
 
             }

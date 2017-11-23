@@ -15,4 +15,4 @@ class CasoDeTeste {
 
 };
 
-export default CasoDeTeste;
+export default window.CasoDeTeste;

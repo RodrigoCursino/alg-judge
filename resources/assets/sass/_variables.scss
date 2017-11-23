@@ -1,9 +1,21 @@
 
 // Body
-$body-bg: rgba(245, 241, 225, 0.61);
+$body-bg: rgb(239, 239, 239);;
 
 body{
   background-color: $body-bg;
 }
+
+
+.hero.is-primary {
+  background-color: #1e9281;
+  color: #fff;
+}
+
+.is-primary {
+  background-color: #1e9281;
+  color: #fff;
+}
+
 
 $fa-font-path: "-material-design-icons-font/iconfont/material-icons.scss" !default;
