@@ -1,29 +1,37 @@
 class ProblemaDao {
 
-    constructor(form) {
-       this.form = form;
-    }
 
-    submitForm () {
-        debugger;
+    static  submitForm (form) {
 
-        /*
+        const data = {
 
-        axios.post('http://localhost:8084/alg-judge/rest/problema',{problema: this.form}).then(response => {
-            console.log('saved', response);
-        });
+            id: form.id ?  form.id : null ,
+            delete: form.delete ?  form.delete : null ,
+            descricao: form.descricao ? form.descricao : null,
+            descricaoEntrada: form.descricaoEntrada ? form.descricaoEntrada: null,
+            descricaoSaida: form.descricaoSaida ? form.descricaoSaida : null  ,
+            titulo: form.titulo ? form.titulo : null,
 
-        */
-
-        axios.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(response => {
-            console.log('saved', response);
-        });
+        };
 
     };
 
     updateForm () {
 
     };
+
+    static getAll(){
+
+            axios.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(response => {
+
+                console.log('Get All', response.data);
+                return response.data;
+
+            });
+
+    }
+
+
 
 };
 

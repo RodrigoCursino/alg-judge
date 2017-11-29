@@ -6,3 +6,4 @@ Vue.component('form-group',require('./form/FormGroup'));
 // Input
 require('./input/InputText');
 Vue.component('input-text',require('./input/InputText'));
+Vue.component('input-hidden',require('./input/inputHidden'));

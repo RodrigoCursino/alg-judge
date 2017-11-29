@@ -1,6 +1,8 @@
 <template>
 
-    <form-submit :form-request="problemaDao">
+    <form>
+
+        <input-hidden v-model="problema.id"></input-hidden>
 
         <form-group :form="problema" field="titulo">
             <label class="label">Título</label>
@@ -21,8 +23,11 @@
             <label class="label">Descrição Saída</label>
             <vue-editor v-model="problema.descricaoSaida"></vue-editor>
         </form-group>
+        <hr>
 
-    </form-submit>
+        <a @click.native="saveProblema(problema)"  class="button is-primary">Salvar</a>
+
+    </form>
 
 </template>
 
@@ -32,6 +37,7 @@
 </style>
 
 <script>
+
     import Problema from "../../../../../Model/Problema";
     import ProblemaDao from "../../../../../Dao/ProblemaDao";
     import {VueEditor} from 'vue2-editor';
@@ -55,7 +61,6 @@
         created() {
 
             this.problema = Problema.buildForm(this.problema);
-            this.problemaDao = new ProblemaDao(this.problema);
 
         },
 
@@ -63,7 +68,19 @@
             console.log('Component mounted.');
         },
 
-        methods: {}
+        methods: {
+
+            saveProblema(problema) {
+
+                const data = ProblemaDao.submitForm(problema);
+
+                axios.post('http://localhost:8084/alg-judge/rest/problema', data).then(response => {
+                    console.log ('saved', response);
+                });
+
+            },
+
+        }
     }
 
 </script>
