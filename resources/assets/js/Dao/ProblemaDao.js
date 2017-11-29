@@ -14,6 +14,8 @@ class ProblemaDao {
 
         };
 
+        return data;
+
     };
 
     updateForm () {

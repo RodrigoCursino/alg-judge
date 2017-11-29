@@ -5578,6 +5578,8 @@ var ProblemaDao = function () {
                 titulo: form.titulo ? form.titulo : null
 
             };
+
+            return data;
         }
     }, {
         key: 'getAll',
@@ -62976,6 +62978,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Dao_ProblemaDao__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue2_editor__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue2_editor___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue2_editor__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
 //
 //
 //
@@ -63014,6 +63018,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
@@ -63048,7 +63053,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             var data = __WEBPACK_IMPORTED_MODULE_1__Dao_ProblemaDao__["a" /* default */].submitForm(problema);
 
-            axios.post('http://localhost:8084/alg-judge/rest/problema', data).then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_3_axios___default.a.post('http://localhost:8084/alg-judge/rest/problema', data).then(function (response) {
                 console.log('saved', response);
             });
         }
@@ -63158,7 +63163,7 @@ var render = function() {
         "a",
         {
           staticClass: "button is-primary",
-          nativeOn: {
+          on: {
             click: function($event) {
               _vm.saveProblema(_vm.problema)
             }

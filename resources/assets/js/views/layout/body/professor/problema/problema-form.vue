@@ -25,7 +25,7 @@
         </form-group>
         <hr>
 
-        <a @click.native="saveProblema(problema)"  class="button is-primary">Salvar</a>
+        <a @click="saveProblema(problema)"  class="button is-primary">Salvar</a>
 
     </form>
 
@@ -41,6 +41,7 @@
     import Problema from "../../../../../Model/Problema";
     import ProblemaDao from "../../../../../Dao/ProblemaDao";
     import {VueEditor} from 'vue2-editor';
+    import http from 'axios';
 
     export default {
 
@@ -70,11 +71,11 @@
 
         methods: {
 
-            saveProblema(problema) {
+            saveProblema (problema) {
 
                 const data = ProblemaDao.submitForm(problema);
 
-                axios.post('http://localhost:8084/alg-judge/rest/problema', data).then(response => {
+                http.post('http://localhost:8084/alg-judge/rest/problema',data).then(response => {
                     console.log ('saved', response);
                 });
 
