@@ -3,7 +3,7 @@
     <div class="container box">
         <div class="panel">
             <div class="panel-body">
-                <problema-form></problema-form>
+                <problema-list></problema-list>
             </div>
         </div>
     </div>

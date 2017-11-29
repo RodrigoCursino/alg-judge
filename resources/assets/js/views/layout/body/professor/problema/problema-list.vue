@@ -1,45 +1,23 @@
 <template>
 
-    <div class="bd-snippet-preview ">
-
-        <table class="table">
+    <div>
+        <table class="table is-fullwidth">
             <thead>
             <tr>
-                <th><abbr title="Position">Pos</abbr></th>
-                <th>Team</th>
-                <th><abbr title="Played">Pld</abbr></th>
-                <th><abbr title="Won">W</abbr></th>
-                <th><abbr title="Drawn">D</abbr></th>
-                <th><abbr title="Lost">L</abbr></th>
-                <th><abbr title="Goals for">GF</abbr></th>
-                <th><abbr title="Goals against">GA</abbr></th>
-                <th><abbr title="Goal difference">GD</abbr></th>
-                <th><abbr title="Points">Pts</abbr></th>
-                <th>Qualification or relegation</th>
+                <th>Titúlo</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             </thead>
-            <tfoot>
-            <tr>
-                <th><abbr title="Position">Pos</abbr></th>
-                <th>Team</th>
-                <th><abbr title="Played">Pld</abbr></th>
-                <th><abbr title="Won">W</abbr></th>
-                <th><abbr title="Drawn">D</abbr></th>
-                <th><abbr title="Lost">L</abbr></th>
-                <th><abbr title="Goals for">GF</abbr></th>
-                <th><abbr title="Goals against">GA</abbr></th>
-                <th><abbr title="Goal difference">GD</abbr></th>
-                <th><abbr title="Points">Pts</abbr></th>
-                <th>Qualification or relegation</th>
-            </tr>
-            </tfoot>
             <tbody>
-                <tr>
-                    <td v-for="problema in problemas">{{p.titulo}}</td>
-                </tr>
+            <tr v-for="problema in problemas">
+                <td>{{problema.titulo}}</td>
+                <td> <button class="button is-primary">DEL</button> </td>
+                <td> <button class="button is-danger">DEL</button></td>
+            </tr>
+
             </tbody>
         </table>
-
     </div>
 
 </template>
@@ -53,11 +31,11 @@
 
     import Problema from "../../../../../Model/Problema";
     import ProblemaDao from "../../../../../Dao/ProblemaDao";
-
+    import http from 'axios';
 
     export default {
 
-        data(){
+        data() {
 
             return {
 
@@ -69,19 +47,29 @@
 
         created() {
 
-           this.getAll();
+            this.getAll();
 
         },
 
         methods: {
 
-            getAll(){
+            getAll() {
 
-               this.axios.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(response => {
+                http.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(response => {
 
-                   this.problemas = response.data;
+                    this.problemas = response.data;
 
-               });
+                });
+
+            },
+
+            delete() {
+
+                http.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(response => {
+
+                    this.problemas = response.data;
+
+                });
 
             },
 

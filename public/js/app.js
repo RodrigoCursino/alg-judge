@@ -63285,6 +63285,8 @@ exports.push([module.i, "", ""]);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Model_Problema__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Dao_ProblemaDao__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 //
 //
 //
@@ -63314,28 +63316,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 
@@ -63360,9 +63341,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getAll: function getAll() {
             var _this = this;
 
-            this.axios.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(function (response) {
 
                 _this.problemas = response.data;
+            });
+        },
+        delete: function _delete() {
+            var _this2 = this;
+
+            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('http://localhost:8084/alg-judge/rest/problema/list/10').then(function (response) {
+
+                _this2.problemas = response.data;
             });
         }
     }
@@ -63376,20 +63365,22 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "bd-snippet-preview " }, [
-    _c("table", { staticClass: "table" }, [
+  return _c("div", [
+    _c("table", { staticClass: "table is-fullwidth" }, [
       _vm._m(0, false, false),
       _vm._v(" "),
-      _vm._m(1, false, false),
-      _vm._v(" "),
-      _c("tbody", [
-        _c(
-          "tr",
-          _vm._l(_vm.problemas, function(problema) {
-            return _c("td", [_vm._v(_vm._s(_vm.p.titulo))])
-          })
-        )
-      ])
+      _c(
+        "tbody",
+        _vm._l(_vm.problemas, function(problema) {
+          return _c("tr", [
+            _c("td", [_vm._v(_vm._s(problema.titulo))]),
+            _vm._v(" "),
+            _vm._m(1, true, false),
+            _vm._v(" "),
+            _vm._m(2, true, false)
+          ])
+        })
+      )
     ])
   ])
 }
@@ -63400,35 +63391,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", [
-          _c("abbr", { attrs: { title: "Position" } }, [_vm._v("Pos")])
-        ]),
+        _c("th", [_vm._v("Titúlo")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Team")]),
+        _c("th", [_vm._v("Edit")]),
         _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Played" } }, [_vm._v("Pld")])]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Won" } }, [_vm._v("W")])]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Drawn" } }, [_vm._v("D")])]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Lost" } }, [_vm._v("L")])]),
-        _vm._v(" "),
-        _c("th", [
-          _c("abbr", { attrs: { title: "Goals for" } }, [_vm._v("GF")])
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _c("abbr", { attrs: { title: "Goals against" } }, [_vm._v("GA")])
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _c("abbr", { attrs: { title: "Goal difference" } }, [_vm._v("GD")])
-        ]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Points" } }, [_vm._v("Pts")])]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Qualification or relegation")])
+        _c("th", [_vm._v("Delete")])
       ])
     ])
   },
@@ -63436,38 +63403,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("tfoot", [
-      _c("tr", [
-        _c("th", [
-          _c("abbr", { attrs: { title: "Position" } }, [_vm._v("Pos")])
-        ]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Team")]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Played" } }, [_vm._v("Pld")])]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Won" } }, [_vm._v("W")])]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Drawn" } }, [_vm._v("D")])]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Lost" } }, [_vm._v("L")])]),
-        _vm._v(" "),
-        _c("th", [
-          _c("abbr", { attrs: { title: "Goals for" } }, [_vm._v("GF")])
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _c("abbr", { attrs: { title: "Goals against" } }, [_vm._v("GA")])
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _c("abbr", { attrs: { title: "Goal difference" } }, [_vm._v("GD")])
-        ]),
-        _vm._v(" "),
-        _c("th", [_c("abbr", { attrs: { title: "Points" } }, [_vm._v("Pts")])]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Qualification or relegation")])
-      ])
+    return _c("td", [
+      _c("button", { staticClass: "button is-primary" }, [_vm._v("DEL")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("button", { staticClass: "button is-danger" }, [_vm._v("DEL")])
     ])
   }
 ]
@@ -63490,7 +63435,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container box" }, [
     _c("div", { staticClass: "panel" }, [
-      _c("div", { staticClass: "panel-body" }, [_c("problema-form")], 1)
+      _c("div", { staticClass: "panel-body" }, [_c("problema-list")], 1)
     ])
   ])
 }
