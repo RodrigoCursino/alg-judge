@@ -6,7 +6,7 @@ class ProblemaDao {
         const data = {
 
             id: form.id ?  form.id : null ,
-            delete: form.delete ?  form.delete : null ,
+            ativo: form.ativo ?  form.ativo : null ,
             descricao: form.descricao ? form.descricao : null,
             descricaoEntrada: form.descricaoEntrada ? form.descricaoEntrada: null,
             descricaoSaida: form.descricaoSaida ? form.descricaoSaida : null  ,

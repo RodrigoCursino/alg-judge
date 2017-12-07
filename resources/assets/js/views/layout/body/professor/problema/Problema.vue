@@ -29,13 +29,11 @@
 
 <script>
 
-    import ProblemaForm from './problema-form';
     import ProblemaList from './problema-list';
 
     export default {
 
         components: {
-            ProblemaForm,
             ProblemaList
         },
 

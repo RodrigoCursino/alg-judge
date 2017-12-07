@@ -1,33 +1,39 @@
 <template>
 
-    <form>
+    <modal-form ref="modal" title="Edit Problema">
 
-        <input-hidden v-model="problema.id"></input-hidden>
+        <div slot="body">
 
-        <form-group :form="problema" field="titulo">
-            <label class="label">Título</label>
-            <input-text v-model="problema.titulo"></input-text>
-        </form-group>
+            <input-hidden v-model="problema.id"></input-hidden>
 
-        <form-group :form="problema" field="descricao">
-            <label class="label">Descrição</label>
-            <vue-editor v-model="problema.descricao"></vue-editor>
-        </form-group>
+            <form-group :form="problema" field="titulo">
+                <label class="label">Título</label>
+                <input-text v-model="problema.titulo"></input-text>
+            </form-group>
 
-        <form-group :form="problema" field="descricaoEntrada">
-            <label class="label">Descrição Entrada</label>
-            <vue-editor v-model="problema.descricaoEntrada"></vue-editor>
-        </form-group>
+            <form-group :form="problema" field="descricao">
+                <label class="label">Descrição</label>
+                <vue-editor id="descricao" v-model="problema.descricao"></vue-editor>
+            </form-group>
 
-        <form-group :form="problema" field="descricaoSaida">
-            <label class="label">Descrição Saída</label>
-            <vue-editor v-model="problema.descricaoSaida"></vue-editor>
-        </form-group>
-        <hr>
+            <form-group :form="problema" field="descricaoEntrada">
+                <label class="label">Descrição Entrada</label>
+                <vue-editor id="descricaoEntrada" v-model="problema.descricaoEntrada"></vue-editor>
+            </form-group>
 
-        <a @click="saveProblema(problema)"  class="button is-primary">Salvar</a>
+            <form-group :form="problema" field="descricaoSaida">
+                <label class="label">Descrição Saída</label>
+                <vue-editor id="descricaoSaida" v-model="problema.descricaoSaida"></vue-editor>
+            </form-group>
 
-    </form>
+        </div>
+
+        <div slot="footer">
+            <button @click="saveProblema(problema)" class="button is-success">Salvar</button>
+            <button @click="hideModal" class="button">Cancel</button>
+        </div>
+
+    </modal-form>
 
 </template>
 
@@ -46,9 +52,14 @@
     export default {
 
         components: {
-            VueEditor
+            VueEditor,
         },
 
+        props: {
+
+            form: {required: false},
+
+        },
 
         data() {
 
@@ -60,26 +71,48 @@
         },
 
         created() {
-
             this.problema = Problema.buildForm(this.problema);
-
         },
 
-        mounted() {
-            console.log('Component mounted.');
+        watch: {
+            form: function () {
+                if (this.form) {
+                    this.problema = Problema.buildForm(this.form);
+                }
+            }
         },
 
         methods: {
 
-            saveProblema (problema) {
+            saveProblema(problema) {
 
                 const data = ProblemaDao.submitForm(problema);
 
-                http.post('http://localhost:8084/alg-judge/rest/problema',data).then(response => {
-                    console.log ('saved', response);
-                });
+                if (data.id) {
+
+                    http.put('http://localhost:8084/alg-judge/rest/problema', problema).then(response => {
+                        this.$refs.modal.hideModal();
+                    });
+
+                } else {
+
+                    http.post('http://localhost:8084/alg-judge/rest/problema', data).then(response => {
+                        console.log('saved', response);
+                        this.$refs.modal.hideModal();
+                    });
+                };
 
             },
+
+            hideModal() {
+
+                this.$refs.modal.hideModal();
+            },
+
+            showModal() {
+
+                this.$refs.modal.showModal();
+            }
 
         }
     }

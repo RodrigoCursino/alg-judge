@@ -1,6 +1,7 @@
 <template>
+    <div>
 
-
+    </div>
 </template>
 
 
@@ -9,7 +10,11 @@
 </style>
 
 <script>
+
+
+
     export default {
+
 
         props: {},
 
@@ -19,7 +24,11 @@
 
         data() {
 
-            return {}
+            return {
+
+               casoDeTeste
+
+            }
 
         },
 
@@ -31,7 +40,15 @@
 
         },
 
-        methods: {},
+        methods: {
+
+            showMeCode(){
+
+              console.log('Codigo Enter');
+
+            },
+
+        },
     }
 
 </script>

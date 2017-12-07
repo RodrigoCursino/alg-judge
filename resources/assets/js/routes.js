@@ -5,8 +5,8 @@ let routes = [
 
     {
 
-       path:'/',
-       component: require('./views/layout/body/Home'),
+        path:'/',
+        component: require('./views/layout/body/Home'),
 
     },
 
@@ -17,13 +17,13 @@ let routes = [
 
     },
 
-
     {
 
-        path:'/alunos',
-        component: require('./views/layout/body/professor/alunos/Alunos'),
+        path:'/problema/caso-de-teste/:pid',
+        component: require('./views/layout/body/professor/problema/caso-de-teste/Caso'),
+        props: true
 
-    }
+    },
 
 ];
 
@@ -31,7 +31,6 @@ let routes = [
 export default new VueRouter({
 
     routes,
-
     linkActiveClass: 'is-active',
 
 });

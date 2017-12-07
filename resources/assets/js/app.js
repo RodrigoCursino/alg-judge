@@ -10,7 +10,8 @@ import router from './routes';
 window.moment = Moment;
 
 window.Vue = Vue;
-Vue.use(VueRouter);
+Vue.use(VueRouter)
+
 
 require('./views/layouts');
 require('./vue/bootstrap');
@@ -34,7 +35,7 @@ window.App = new Vue({
         return {
 
             user: false,
-            userModel: new User('Rodrigo', 'rodrigo@cursino.com')
+            userModel: new User('Rodrigo', 'rodrigo@cursino.com'),
 
         }
     },

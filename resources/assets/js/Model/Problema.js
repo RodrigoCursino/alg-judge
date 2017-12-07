@@ -6,7 +6,7 @@ class Problema {
             id: problema.id ? problema.id : null,
             titulo: problema.titulo ? problema.titulo : null,
             descricao: problema.descricao ? problema.descricao : null,
-            delete: problema.delete ? problema.delete : null,
+            ativo: problema.ativo ? problema.ativo : true,
             descricaoEntrada: problema.descricaoEntrada ? problema.descricaoEntrada : null,
             descricaoSaida: problema.descricaoSaida ? problema.descricaoSaida : null,
         };
@@ -20,7 +20,7 @@ class Problema {
             id: form.id,
             titulo: form.titulo,
             descricao: form.descricao,
-            delete: form.delete,
+            ativo: true,
             descricaoEntrada: form.descricaoEntrada,
             descricaoSaida: form.descricaoSaida,
         };

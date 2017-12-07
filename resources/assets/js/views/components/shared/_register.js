@@ -7,3 +7,6 @@ Vue.component('form-group',require('./form/FormGroup'));
 require('./input/InputText');
 Vue.component('input-text',require('./input/InputText'));
 Vue.component('input-hidden',require('./input/inputHidden'));
+
+// Modal
+Vue.component('modal-form',require('./Modal/Modal'));

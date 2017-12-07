@@ -17,11 +17,6 @@
                     <a>Alunos</a>
                 </router-link>
 
-
-                <router-link tag="li" to="/configuracao">
-                    <a>Configurações</a>
-                </router-link>
-
             </ul>
         </div>
     </nav>
