@@ -2,7 +2,7 @@
     <div class="container box">
         <div class="panel">
             <div class="panel-body">
-                <caso-list :problema-id="pid"></caso-list>
+                <caso-list></caso-list>
             </div>
         </div>
     </div>
@@ -33,7 +33,6 @@
 
             return {
 
-               casoDeTeste
 
             }
 

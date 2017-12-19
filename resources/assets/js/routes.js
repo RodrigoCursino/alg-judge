@@ -20,7 +20,7 @@ let routes = [
     {
 
         path:'/problema/caso-de-teste/:pid',
-        component: require('./views/layout/body/professor/problema/caso-de-teste/Caso'),
+        component: require('./views/layout/body/professor/problema/caso-de-teste/CasoDeTeste'),
         props: true
 
     },
