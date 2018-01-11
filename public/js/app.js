@@ -5331,7 +5331,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(191)
+var listToStyles = __webpack_require__(194)
 
 /*
 type StyleObject = {
@@ -30326,13 +30326,13 @@ if (inBrowser && window.Vue) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(199)
+  __webpack_require__(202)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(201)
+var __vue_script__ = __webpack_require__(204)
 /* template */
-var __vue_template__ = __webpack_require__(203)
+var __vue_template__ = __webpack_require__(206)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -30376,7 +30376,7 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(138);
-module.exports = __webpack_require__(204);
+module.exports = __webpack_require__(207);
 
 
 /***/ }),
@@ -30409,7 +30409,7 @@ __WEBPACK_IMPORTED_MODULE_1_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_
 __webpack_require__(175);
 __webpack_require__(182);
 __webpack_require__(185);
-__webpack_require__(186);
+__webpack_require__(189);
 
 /*
 require('./views/layout');
@@ -63223,43 +63223,160 @@ window.Errors = function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(3);
-__webpack_require__(212);
-__webpack_require__(213);
-__webpack_require__(214);
+__webpack_require__(186);
+__webpack_require__(187);
+__webpack_require__(188);
 
 /***/ }),
 /* 186 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-__webpack_require__(187);
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var CasoDeTeste = function () {
+    function CasoDeTeste() {
+        _classCallCheck(this, CasoDeTeste);
+    }
+
+    _createClass(CasoDeTeste, null, [{
+        key: "buildForm",
+        value: function buildForm(casoDeTeste) {
+
+            var data = {
+                id: casoDeTeste.id ? casoDeTeste.id : null,
+                exemplo: casoDeTeste.exemplo ? casoDeTeste.exemplo : null,
+                entrada: casoDeTeste.entrada ? casoDeTeste.entrada : null,
+                isDeleted: casoDeTeste.isDeleted ? casoDeTeste.isDeleted : null,
+                problema: casoDeTeste.problema ? casoDeTeste.problema : null
+            };
+
+            return this.form = new Form(data);
+        }
+    }]);
+
+    return CasoDeTeste;
+}();
+
+;
+
+/* harmony default export */ __webpack_exports__["default"] = (CasoDeTeste);
 
 /***/ }),
 /* 187 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Problema = function () {
+    function Problema() {
+        _classCallCheck(this, Problema);
+    }
+
+    _createClass(Problema, null, [{
+        key: "buildForm",
+        value: function buildForm(problema) {
+
+            var data = {
+                id: problema.id ? problema.id : null,
+                titulo: problema.titulo ? problema.titulo : null,
+                descricao: problema.descricao ? problema.descricao : null,
+                descricaoEntrada: problema.descricaoEntrada ? problema.descricaoEntrada : null,
+                descricaoSaida: problema.descricaoSaida ? problema.descricaoSaida : null,
+                isDeleted: problema.isDeleted ? problema.isDeleted : null
+            };
+
+            return this.form = new Form(data);
+        }
+    }]);
+
+    return Problema;
+}();
+
+;
+
+/* harmony default export */ __webpack_exports__["default"] = (Problema);
+
+/***/ }),
+/* 188 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Submissao = function () {
+    function Submissao() {
+        _classCallCheck(this, Submissao);
+    }
+
+    _createClass(Submissao, null, [{
+        key: "buildForm",
+        value: function buildForm(submissao) {
+
+            var data = {
+                id: submissao.id ? submissao.id : null,
+                codigoFonte: submissao.codigoFonte ? submissao.codigoFonte : null,
+                dataEnvio: submissao.dataEnvio ? submissao.dataEnvio : null,
+                isDeleted: submissao.isDeleted ? submissao.isDeleted : null,
+                tempoExecucao: submissao.tempoExecucao ? submissao.tempoExecucao : null,
+                situacao: submissao.situacao ? submissao.situacao : null,
+                problema: submissao.problema ? submissao.problema : null
+            };
+
+            return this.form = new Form(data);
+        }
+    }]);
+
+    return Submissao;
+}();
+
+;
+
+/* harmony default export */ __webpack_exports__["default"] = (Submissao);
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(190);
+
+/***/ }),
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 // Forms
-Vue.component('form-submit', __webpack_require__(188));
-Vue.component('form-group', __webpack_require__(194));
+Vue.component('form-submit', __webpack_require__(191));
+Vue.component('form-group', __webpack_require__(197));
 
 // Input
 __webpack_require__(136);
 Vue.component('input-text', __webpack_require__(136));
 
 /***/ }),
-/* 188 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(189)
+  __webpack_require__(192)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(192)
+var __vue_script__ = __webpack_require__(195)
 /* template */
-var __vue_template__ = __webpack_require__(193)
+var __vue_template__ = __webpack_require__(196)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -63299,13 +63416,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 189 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(190);
+var content = __webpack_require__(193);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -63325,7 +63442,7 @@ if(false) {
 }
 
 /***/ }),
-/* 190 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(7)(undefined);
@@ -63339,7 +63456,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 191 */
+/* 194 */
 /***/ (function(module, exports) {
 
 /**
@@ -63372,7 +63489,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 192 */
+/* 195 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63418,7 +63535,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 193 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -63459,19 +63576,19 @@ if (false) {
 }
 
 /***/ }),
-/* 194 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(195)
+  __webpack_require__(198)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
-var __vue_script__ = __webpack_require__(197)
+var __vue_script__ = __webpack_require__(200)
 /* template */
-var __vue_template__ = __webpack_require__(198)
+var __vue_template__ = __webpack_require__(201)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -63511,13 +63628,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 195 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(196);
+var content = __webpack_require__(199);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -63537,7 +63654,7 @@ if(false) {
 }
 
 /***/ }),
-/* 196 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(7)(undefined);
@@ -63551,7 +63668,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 197 */
+/* 200 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63599,7 +63716,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 198 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -63629,13 +63746,13 @@ if (false) {
 }
 
 /***/ }),
-/* 199 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(200);
+var content = __webpack_require__(203);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -63655,7 +63772,7 @@ if(false) {
 }
 
 /***/ }),
-/* 200 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(7)(undefined);
@@ -63669,7 +63786,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 201 */
+/* 204 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63690,11 +63807,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 
-   mixins: [__webpack_require__(202)]
+   mixins: [__webpack_require__(205)]
 });
 
 /***/ }),
-/* 202 */
+/* 205 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -63725,7 +63842,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 203 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -63767,134 +63884,10 @@ if (false) {
 }
 
 /***/ }),
-/* 204 */
+/* 207 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var CasoDeTeste = function () {
-    function CasoDeTeste() {
-        _classCallCheck(this, CasoDeTeste);
-    }
-
-    _createClass(CasoDeTeste, null, [{
-        key: "buildForm",
-        value: function buildForm(casoDeTeste) {
-
-            var data = {
-                id: casoDeTeste.id ? casoDeTeste.id : null,
-                exemplo: casoDeTeste.exemplo ? casoDeTeste.exemplo : null,
-                entrada: casoDeTeste.entrada ? casoDeTeste.entrada : null,
-                isDeleted: casoDeTeste.isDeleted ? casoDeTeste.isDeleted : null,
-                problema: casoDeTeste.problema ? casoDeTeste.problema : null
-            };
-
-            return this.form = new Form(data);
-        }
-    }]);
-
-    return CasoDeTeste;
-}();
-
-;
-
-/* harmony default export */ __webpack_exports__["default"] = (CasoDeTeste);
-
-/***/ }),
-/* 213 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Problema = function () {
-    function Problema() {
-        _classCallCheck(this, Problema);
-    }
-
-    _createClass(Problema, null, [{
-        key: "buildForm",
-        value: function buildForm(problema) {
-
-            var data = {
-                id: problema.id ? problema.id : null,
-                titulo: problema.titulo ? problema.titulo : null,
-                descricao: problema.descricao ? problema.descricao : null,
-                descricaoEntrada: problema.descricaoEntrada ? problema.descricaoEntrada : null,
-                descricaoSaida: problema.descricaoSaida ? problema.descricaoSaida : null,
-                isDeleted: problema.isDeleted ? problema.isDeleted : null
-            };
-
-            return this.form = new Form(data);
-        }
-    }]);
-
-    return Problema;
-}();
-
-;
-
-/* harmony default export */ __webpack_exports__["default"] = (Problema);
-
-/***/ }),
-/* 214 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Submissao = function () {
-    function Submissao() {
-        _classCallCheck(this, Submissao);
-    }
-
-    _createClass(Submissao, null, [{
-        key: "buildForm",
-        value: function buildForm(submissao) {
-
-            var data = {
-                id: submissao.id ? submissao.id : null,
-                codigoFonte: submissao.codigoFonte ? submissao.codigoFonte : null,
-                dataEnvio: submissao.dataEnvio ? submissao.dataEnvio : null,
-                isDeleted: submissao.isDeleted ? submissao.isDeleted : null,
-                tempoExecucao: submissao.tempoExecucao ? submissao.tempoExecucao : null,
-                situacao: submissao.situacao ? submissao.situacao : null,
-                problema: submissao.problema ? submissao.problema : null
-            };
-
-            return this.form = new Form(data);
-        }
-    }]);
-
-    return Submissao;
-}();
-
-;
-
-/* harmony default export */ __webpack_exports__["default"] = (Submissao);
 
 /***/ })
 /******/ ]);
