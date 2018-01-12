@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="../public/css/app.css" rel="stylesheet">
-    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
 </head>
 <body>
   <div id="app">
@@ -13,18 +11,6 @@
        <router-view></router-view>
   </div>
   <script src="../public/js/app.js"></script>
-  <script>
-      // Initialize Firebase
-      let config = {
-          apiKey: "AIzaSyCcNvh2bN6fnv3_GvyGwhBjrLnv_2F6WZw",
-          authDomain: "tcc-test-2fc6e.firebaseapp.com",
-          databaseURL: "https://tcc-test-2fc6e.firebaseio.com",
-          projectId: "tcc-test-2fc6e",
-          storageBucket: "",
-          messagingSenderId: "393360292327"
-      };
-      firebase.initializeApp(config);
-  </script>
 </body>
 </html>
 

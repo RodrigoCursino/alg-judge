@@ -1,7 +1,7 @@
 <template>
     <div>
         <form>
-            <input type="hidden" :value="abc.id"/>
+            <input type="hidden" :value="formRequest.id"/>
             <slot></slot>
             <hr>
             <a @click="submit" class="button is-primary">Salvar</a>
@@ -15,26 +15,25 @@
 </style>
 
 <script>
+
+    import Problema from '../../../../Model/Problema'
+
     export default {
+
 
         props: {
 
-            abc:{
+            formRequest: {
                 type: Object,
                 required: true,
             },
 
         },
 
-        methods:{
+        methods: {
 
             submit() {
-                if(this.abc.id) {
-                    this.abc.updateForm();
-                } else {
-                    debugger;
-                    this.abc.submitForm();
-                }
+
 
             }
 

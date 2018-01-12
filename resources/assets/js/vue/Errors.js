@@ -54,7 +54,7 @@ class Errors {
 class Form {
 
 
-    constructor(data) {
+        constructor(data) {
 
         this.originalData = data;
 
