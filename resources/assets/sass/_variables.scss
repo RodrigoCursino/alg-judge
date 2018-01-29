@@ -1,21 +1,32 @@
-
 // Body
-$body-bg: rgb(239, 239, 239);;
+$body-bg: rgb(239, 239, 239);
+$footer-background-color: color(blue);
+;
 
-body{
+body {
   background-color: $body-bg;
 }
 
+.hero {
+  is-primary {
+    background-color: #169208;
+    color: #fff;
+  }
+}
 
-.hero.is-primary {
-  background-color: #1e9281;
+.is-primary {
+  background-color: #169208;
   color: #fff;
+}
+
+.footer {
+  background-color: $footer-background-color;
+  padding: 3rem 1.5rem 6rem
 }
 
 .is-primary {
   background-color: #1e9281;
   color: #fff;
 }
-
 
 $fa-font-path: "-material-design-icons-font/iconfont/material-icons.scss" !default;

@@ -1,11 +1,17 @@
 class CasoDeTesteDao {
 
-    constructor(form) {
-       this.form = form;
-    }
+    static submitForm (form){
 
-    submitForm () {
+        const data = {
+            id: form.id ? form.id : 0,
+            exemplo: form.exemplo ? form.exemplo : null,
+            entrada: form.entrada ? form.entrada : null,
+            saida: form.saida ? form.saida : null,
+            ativo: true,
+            problema: form.problema ? form.problema : null,
+        };
 
+        return data;
     };
 
     updateForm () {

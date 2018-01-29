@@ -26,12 +26,12 @@
                                 Documentation
                             </a>
                             <span class="navbar-item">
-              <a class="button is-primary is-inverted">
-                <span class="icon">
-                 <i class="material-icons">&#xE87C;</i>
-                </span>
-                <span>Download</span>
-              </a>
+              <a class="button is-large">
+                 <span class="icon is-medium">
+                 <i class="fa fa-etsy" aria-hidden="true"></i>
+                 </span>
+              <span>GitHub</span>
+          </a>
             </span>
                         </div>
                     </div>
@@ -63,9 +63,9 @@
 
     export default {
 
-       components:{
-           HeaderNav,
-       }
+        components: {
+            HeaderNav,
+        }
 
     }
 

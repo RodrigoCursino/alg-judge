@@ -6,11 +6,14 @@ import Vue from 'vue';
 import Moment from 'moment';
 import VueRouter from 'vue-router';
 import router from './routes';
+import ToggleButton from 'vue-js-toggle-button';
+
 
 window.moment = Moment;
 
 window.Vue = Vue;
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+Vue.use(ToggleButton);
 
 
 require('./views/layouts');

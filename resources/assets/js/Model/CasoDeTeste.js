@@ -6,7 +6,8 @@ class CasoDeTeste {
             id: casoDeTeste.id ? casoDeTeste.id : null,
             exemplo: casoDeTeste.exemplo ? casoDeTeste.exemplo : null,
             entrada: casoDeTeste.entrada ? casoDeTeste.entrada : null,
-            isDeleted: casoDeTeste.isDeleted ? casoDeTeste.isDeleted : null,
+            saida: casoDeTeste.saida ? casoDeTeste.saida : null,
+            ativo: casoDeTeste.ativo ? casoDeTeste.ativo : null,
             problema: casoDeTeste.problema ? casoDeTeste.problema : null,
         };
 
@@ -15,4 +16,4 @@ class CasoDeTeste {
 
 };
 
-export default window.CasoDeTeste;
+export default CasoDeTeste;

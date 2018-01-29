@@ -28,6 +28,7 @@
     "moment": "^2.19.2",
     "sweetalert": "^2.0.8",
     "toastr": "^2.1.2",
+    "vue-js-toggle-button": "^1.2.2",
     "vue-router": "^3.0.1",
     "vue2-editor": "^2.3.11"
   }
